@@ -1,0 +1,6 @@
+# ninja log v7
+0	8	1791885431184641439	CMakeFiles/blinky.dir/Src/startup_stm32g474xx.S.obj	664f625ab01fd48b
+0	16	1791885431184478720	CMakeFiles/blinky.dir/Src/sysmem.c.obj	ce2232234fc88a5a
+0	29	1791885431183451369	CMakeFiles/blinky.dir/Src/syscall.c.obj	365fe1f858feda37
+1	60	1792128407849358780	CMakeFiles/blinky.dir/Src/main.c.obj	9d5a5f94f408429c
+60	74	1792128407908565580	blinky.elf	f3289a0b3e32aa2

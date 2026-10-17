@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/hiro/Documents/Embedded/G474RE/blinky/build/Debug",
+  "command": "/home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc -DDEBUG -DRTE_DEVICE_STARTUP_STM32G4XX -I/home/hiro/Documents/Embedded/G474RE/blinky/Inc -I/home/hiro/Documents/Embedded/G474RE/blinky/include -I\"/home/hiro/Documents/Embedded/G474RE/blinky/(\" -I\"/home/hiro/Documents/Embedded/G474RE/blinky/)\" -fdata-sections -ffunction-sections -Wl,--gc-sections -Wno-comment -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mlittle-endian -mthumb -std=gnu11 -fstack-usage -Wall -Wextra -Wpedantic -Wno-unused-parameter -O0 -g3 -ggdb -o CMakeFiles/blinky.dir/Src/syscall.c.obj -c /home/hiro/Documents/Embedded/G474RE/blinky/Src/syscall.c",
+  "file": "/home/hiro/Documents/Embedded/G474RE/blinky/Src/syscall.c",
+  "output": "/home/hiro/Documents/Embedded/G474RE/blinky/build/Debug/CMakeFiles/blinky.dir/Src/syscall.c.obj"
+},
+{
+  "directory": "/home/hiro/Documents/Embedded/G474RE/blinky/build/Debug",
+  "command": "/home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc -DDEBUG -DRTE_DEVICE_STARTUP_STM32G4XX -I/home/hiro/Documents/Embedded/G474RE/blinky/Inc -I/home/hiro/Documents/Embedded/G474RE/blinky/include -I\"/home/hiro/Documents/Embedded/G474RE/blinky/(\" -I\"/home/hiro/Documents/Embedded/G474RE/blinky/)\" -fdata-sections -ffunction-sections -Wl,--gc-sections -Wno-comment -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mlittle-endian -mthumb -std=gnu11 -fstack-usage -Wall -Wextra -Wpedantic -Wno-unused-parameter -O0 -g3 -ggdb -o CMakeFiles/blinky.dir/Src/sysmem.c.obj -c /home/hiro/Documents/Embedded/G474RE/blinky/Src/sysmem.c",
+  "file": "/home/hiro/Documents/Embedded/G474RE/blinky/Src/sysmem.c",
+  "output": "/home/hiro/Documents/Embedded/G474RE/blinky/build/Debug/CMakeFiles/blinky.dir/Src/sysmem.c.obj"
+},
+{
+  "directory": "/home/hiro/Documents/Embedded/G474RE/blinky/build/Debug",
+  "command": "/home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc -DDEBUG -DRTE_DEVICE_STARTUP_STM32G4XX -I/home/hiro/Documents/Embedded/G474RE/blinky/Inc -I/home/hiro/Documents/Embedded/G474RE/blinky/include -I\"/home/hiro/Documents/Embedded/G474RE/blinky/(\" -I\"/home/hiro/Documents/Embedded/G474RE/blinky/)\" -fdata-sections -ffunction-sections -Wl,--gc-sections -Wno-comment -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mlittle-endian -mthumb -std=gnu11 -fstack-usage -Wall -Wextra -Wpedantic -Wno-unused-parameter -O0 -g3 -ggdb -o CMakeFiles/blinky.dir/Src/main.c.obj -c /home/hiro/Documents/Embedded/G474RE/blinky/Src/main.c",
+  "file": "/home/hiro/Documents/Embedded/G474RE/blinky/Src/main.c",
+  "output": "/home/hiro/Documents/Embedded/G474RE/blinky/build/Debug/CMakeFiles/blinky.dir/Src/main.c.obj"
+},
+{
+  "directory": "/home/hiro/Documents/Embedded/G474RE/blinky/build/Debug",
+  "command": "/home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc -DDEBUG -DRTE_DEVICE_STARTUP_STM32G4XX -I/home/hiro/Documents/Embedded/G474RE/blinky/Inc -I/home/hiro/Documents/Embedded/G474RE/blinky/include -I\"/home/hiro/Documents/Embedded/G474RE/blinky/(\" -I\"/home/hiro/Documents/Embedded/G474RE/blinky/)\" -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mlittle-endian -mthumb -std=gnu11 -fstack-usage -Wall -Wextra -Wpedantic -Wno-unused-parameter -O0 -g3 -ggdb -x assembler-with-cpp -MMD -MP -o CMakeFiles/blinky.dir/Src/startup_stm32g474xx.S.obj -c /home/hiro/Documents/Embedded/G474RE/blinky/Src/startup_stm32g474xx.S",
+  "file": "/home/hiro/Documents/Embedded/G474RE/blinky/Src/startup_stm32g474xx.S",
+  "output": "/home/hiro/Documents/Embedded/G474RE/blinky/build/Debug/CMakeFiles/blinky.dir/Src/startup_stm32g474xx.S.obj"
+}
+]
