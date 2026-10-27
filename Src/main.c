@@ -27,18 +27,19 @@ void configureTim2Interrupt();
 
 int main(void)
 {
-    int cpuFrequency = 15000000;
+    // int cpuFrequency = 15000000;
     configureClock();
-    // configureTim2Interrupt();
-    // USER LED (LD2) CONNECTED TO PA5
     configureUSRLED2();
+    configureTim2Interrupt();
+    // USER LED (LD2) CONNECTED TO PA5
+    
 
     /* Loop forever */
 	while(1){
 
-        for (int i = 0; i <= cpuFrequency; i++) {
-        }
-        GPIOA->ODR ^= GPIO_ODR_OD5;       
+        // for (int i = 0; i <= cpuFrequency; i++) {
+        // }
+        // GPIOA->ODR ^= GPIO_ODR_OD5;       
     }
 }
 

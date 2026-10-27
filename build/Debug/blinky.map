@@ -523,10 +523,6 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/blinky.dir/Src/main.c.obj
  .data          0x00000000        0x0 CMakeFiles/blinky.dir/Src/main.c.obj
  .bss           0x00000000        0x0 CMakeFiles/blinky.dir/Src/main.c.obj
- .text.__NVIC_EnableIRQ
-                0x00000000       0x3c CMakeFiles/blinky.dir/Src/main.c.obj
- .text.configureTim2Interrupt
-                0x00000000       0x5c CMakeFiles/blinky.dir/Src/main.c.obj
  .debug_macro   0x00000000      0xad2 CMakeFiles/blinky.dir/Src/main.c.obj
  .debug_macro   0x00000000       0x22 CMakeFiles/blinky.dir/Src/main.c.obj
  .debug_macro   0x00000000      0x103 CMakeFiles/blinky.dir/Src/main.c.obj
@@ -591,7 +587,7 @@ LOAD /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/b
                 0x08000000                g_pfnVectors
                 0x080001d8                        . = ALIGN (0x4)
 
-.text           0x080001d8      0x380
+.text           0x080001d8      0x408
                 0x080001d8                        . = ALIGN (0x4)
  *(.text)
  .text          0x080001d8       0x40 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
@@ -615,210 +611,215 @@ LOAD /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/b
  .text.__register_exitproc
                 0x080002b8       0x80 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
                 0x080002b8                __register_exitproc
- .text.main     0x08000338       0x3c CMakeFiles/blinky.dir/Src/main.c.obj
-                0x08000338                main
+ .text.__NVIC_EnableIRQ
+                0x08000338       0x3c CMakeFiles/blinky.dir/Src/main.c.obj
+ .text.main     0x08000374       0x14 CMakeFiles/blinky.dir/Src/main.c.obj
+                0x08000374                main
  .text.configureUSRLED2
-                0x08000374       0x40 CMakeFiles/blinky.dir/Src/main.c.obj
-                0x08000374                configureUSRLED2
+                0x08000388       0x40 CMakeFiles/blinky.dir/Src/main.c.obj
+                0x08000388                configureUSRLED2
  .text.configureClock
-                0x080003b4      0x108 CMakeFiles/blinky.dir/Src/main.c.obj
-                0x080003b4                configureClock
+                0x080003c8      0x120 CMakeFiles/blinky.dir/Src/main.c.obj
+                0x080003c8                configureClock
+ .text.configureTim2Interrupt
+                0x080004e8       0x5c CMakeFiles/blinky.dir/Src/main.c.obj
+                0x080004e8                configureTim2Interrupt
  .text.TIM2_IRQHandler
-                0x080004bc       0x2e CMakeFiles/blinky.dir/Src/main.c.obj
-                0x080004bc                TIM2_IRQHandler
- *fill*         0x080004ea        0x2 
+                0x08000544       0x2e CMakeFiles/blinky.dir/Src/main.c.obj
+                0x08000544                TIM2_IRQHandler
+ *fill*         0x08000572        0x2 
  .text.Reset_Handler
-                0x080004ec       0x50 CMakeFiles/blinky.dir/Src/startup_stm32g474xx.S.obj
-                0x080004ec                Reset_Handler
+                0x08000574       0x50 CMakeFiles/blinky.dir/Src/startup_stm32g474xx.S.obj
+                0x08000574                Reset_Handler
  .text.Default_Handler
-                0x0800053c        0x2 CMakeFiles/blinky.dir/Src/startup_stm32g474xx.S.obj
-                0x0800053c                EXTI2_IRQHandler
-                0x0800053c                TIM8_TRG_COM_IRQHandler
-                0x0800053c                TIM8_CC_IRQHandler
-                0x0800053c                DMA2_CH8_IRQHandler
-                0x0800053c                DebugMon_Handler
-                0x0800053c                DMA1_CH4_IRQHandler
-                0x0800053c                SPI4_IRQHandler
-                0x0800053c                HRTIM_TIM_FLT_IRQn_IRQHandler
-                0x0800053c                FDCAN3_IT0_IRQHandler
-                0x0800053c                TIM1_CC_IRQHandler
-                0x0800053c                Cordic_IRQHandler
-                0x0800053c                HardFault_Handler
-                0x0800053c                USB_HP_IRQHandler
-                0x0800053c                SysTick_Handler
-                0x0800053c                PendSV_Handler
-                0x0800053c                NMI_Handler
-                0x0800053c                HRTIM_TIMD_IRQn_IRQHandler
-                0x0800053c                EXTI3_IRQHandler
-                0x0800053c                I2C3_ER_IRQHandler
-                0x0800053c                HRTIM_Master_IRQn_IRQHandler
-                0x0800053c                DMA1_CH8_IRQHandler
-                0x0800053c                TIM6_DACUNDER_IRQHandler
-                0x0800053c                EXTI0_IRQHandler
-                0x0800053c                I2C2_EV_IRQHandler
-                0x0800053c                DMA2_CH1_IRQHandler
-                0x0800053c                FPU_IRQHandler
-                0x0800053c                FDCAN1_IT1_IRQHandler
-                0x0800053c                TIM1_UP_TIM16_IRQHandler
-                0x0800053c                DMA2_CH7_IRQHandler
-                0x0800053c                UsageFault_Handler
-                0x0800053c                ADC1_2_IRQHandler
-                0x0800053c                SPI1_IRQHandler
-                0x0800053c                DMA1_CH7_IRQHandler
-                0x0800053c                HRTIM_TIMB_IRQn_IRQHandler
-                0x0800053c                TIM8_UP_IRQHandler
-                0x0800053c                USBWakeUP_IRQHandler
-                0x0800053c                RTC_ALARM_IRQHandler
-                0x0800053c                DMA1_CH6_IRQHandler
-                0x0800053c                TIM20_TRG_COM_IRQHandler
-                0x0800053c                USART3_IRQHandler
-                0x0800053c                LPUART_IRQHandler
-                0x0800053c                UART5_IRQHandler
-                0x0800053c                ADC3_IRQHandler
-                0x0800053c                TIM4_IRQHandler
-                0x0800053c                QUADSPI_IRQHandler
-                0x0800053c                I2C1_EV_IRQHandler
-                0x0800053c                DMA2_CH5_IRQHandler
-                0x0800053c                UART4_IRQHandler
-                0x0800053c                DMA1_CH3_IRQHandler
-                0x0800053c                TIM3_IRQHandler
-                0x0800053c                RCC_IRQHandler
-                0x0800053c                TIM20_UP_IRQHandler
-                0x0800053c                TIM1_TRG_COM_IRQHandler
-                0x0800053c                Default_Handler
-                0x0800053c                FMAC_IRQHandler
-                0x0800053c                EXTI15_10_IRQHandler
-                0x0800053c                TIM7_IRQHandler
-                0x0800053c                FDCAN3_IT1_IRQHandler
-                0x0800053c                TIM5_IRQHandler
-                0x0800053c                UCPD1_IRQHandler
-                0x0800053c                I2C3_EV_IRQHandler
-                0x0800053c                EXTI9_5_IRQHandler
-                0x0800053c                DMA1_CH2_IRQHandler
-                0x0800053c                RTC_WKUP_IRQHandler
-                0x0800053c                SAI_IRQHandler
-                0x0800053c                PVD_PVM_IRQHandler
-                0x0800053c                SPI2_IRQHandler
-                0x0800053c                DMA1_CH1_IRQHandler
-                0x0800053c                MemManage_Handler
-                0x0800053c                ADC5_IRQHandler
-                0x0800053c                SVC_Handler
-                0x0800053c                CRS_IRQHandler
-                0x0800053c                USB_LP_IRQHandler
-                0x0800053c                EXTI4_IRQHandler
-                0x0800053c                RNG_IRQHandler
-                0x0800053c                FDCAN2_IT1_IRQHandler
-                0x0800053c                HRTIM_TIMF_IRQn_IRQHandler
-                0x0800053c                ADC4_IRQHandler
-                0x0800053c                HRTIM_TIMA_IRQn_IRQHandler
-                0x0800053c                WWDG_IRQHandler
-                0x0800053c                I2C4_EV_IRQHandler
-                0x0800053c                FDCAN2_IT0_IRQHandler
-                0x0800053c                FDCAN1_IT0_IRQHandler
-                0x0800053c                COMP7_IRQHandler
-                0x0800053c                COMP1_2_3_IRQHandler
-                0x0800053c                EXTI1_IRQHandler
-                0x0800053c                HRTIM_TIMC_IRQn_IRQHandler
-                0x0800053c                USART2_IRQHandler
-                0x0800053c                COMP4_5_6_IRQHandler
-                0x0800053c                TIM20_BRK_IRQHandler
-                0x0800053c                I2C2_ER_IRQHandler
-                0x0800053c                TIM8_BRK_IRQHandler
-                0x0800053c                FLASH_IRQHandler
-                0x0800053c                TIM20_CC_IRQHandler
-                0x0800053c                BusFault_Handler
-                0x0800053c                USART1_IRQHandler
-                0x0800053c                SPI3_IRQHandler
-                0x0800053c                DMA2_CH6_IRQHandler
-                0x0800053c                DMA2_CH3_IRQHandler
-                0x0800053c                DMA2_CH2_IRQHandler
-                0x0800053c                I2C1_ER_IRQHandler
-                0x0800053c                FMC_IRQHandler
-                0x0800053c                DMA1_CH5_IRQHandler
-                0x0800053c                DMA2_CH4_IRQHandler
-                0x0800053c                LPTIM1_IRQHandler
-                0x0800053c                DMAMUX_OVR_IRQHandler
-                0x0800053c                I2C4_ER_IRQHandler
-                0x0800053c                HRTIM_TIME_IRQn_IRQHandler
-                0x0800053c                RTC_TAMP_CSS_LSE_IRQHandler
-                0x0800053c                TIM1_BRK_TIM15_IRQHandler
+                0x080005c4        0x2 CMakeFiles/blinky.dir/Src/startup_stm32g474xx.S.obj
+                0x080005c4                EXTI2_IRQHandler
+                0x080005c4                TIM8_TRG_COM_IRQHandler
+                0x080005c4                TIM8_CC_IRQHandler
+                0x080005c4                DMA2_CH8_IRQHandler
+                0x080005c4                DebugMon_Handler
+                0x080005c4                DMA1_CH4_IRQHandler
+                0x080005c4                SPI4_IRQHandler
+                0x080005c4                HRTIM_TIM_FLT_IRQn_IRQHandler
+                0x080005c4                FDCAN3_IT0_IRQHandler
+                0x080005c4                TIM1_CC_IRQHandler
+                0x080005c4                Cordic_IRQHandler
+                0x080005c4                HardFault_Handler
+                0x080005c4                USB_HP_IRQHandler
+                0x080005c4                SysTick_Handler
+                0x080005c4                PendSV_Handler
+                0x080005c4                NMI_Handler
+                0x080005c4                HRTIM_TIMD_IRQn_IRQHandler
+                0x080005c4                EXTI3_IRQHandler
+                0x080005c4                I2C3_ER_IRQHandler
+                0x080005c4                HRTIM_Master_IRQn_IRQHandler
+                0x080005c4                DMA1_CH8_IRQHandler
+                0x080005c4                TIM6_DACUNDER_IRQHandler
+                0x080005c4                EXTI0_IRQHandler
+                0x080005c4                I2C2_EV_IRQHandler
+                0x080005c4                DMA2_CH1_IRQHandler
+                0x080005c4                FPU_IRQHandler
+                0x080005c4                FDCAN1_IT1_IRQHandler
+                0x080005c4                TIM1_UP_TIM16_IRQHandler
+                0x080005c4                DMA2_CH7_IRQHandler
+                0x080005c4                UsageFault_Handler
+                0x080005c4                ADC1_2_IRQHandler
+                0x080005c4                SPI1_IRQHandler
+                0x080005c4                DMA1_CH7_IRQHandler
+                0x080005c4                HRTIM_TIMB_IRQn_IRQHandler
+                0x080005c4                TIM8_UP_IRQHandler
+                0x080005c4                USBWakeUP_IRQHandler
+                0x080005c4                RTC_ALARM_IRQHandler
+                0x080005c4                DMA1_CH6_IRQHandler
+                0x080005c4                TIM20_TRG_COM_IRQHandler
+                0x080005c4                USART3_IRQHandler
+                0x080005c4                LPUART_IRQHandler
+                0x080005c4                UART5_IRQHandler
+                0x080005c4                ADC3_IRQHandler
+                0x080005c4                TIM4_IRQHandler
+                0x080005c4                QUADSPI_IRQHandler
+                0x080005c4                I2C1_EV_IRQHandler
+                0x080005c4                DMA2_CH5_IRQHandler
+                0x080005c4                UART4_IRQHandler
+                0x080005c4                DMA1_CH3_IRQHandler
+                0x080005c4                TIM3_IRQHandler
+                0x080005c4                RCC_IRQHandler
+                0x080005c4                TIM20_UP_IRQHandler
+                0x080005c4                TIM1_TRG_COM_IRQHandler
+                0x080005c4                Default_Handler
+                0x080005c4                FMAC_IRQHandler
+                0x080005c4                EXTI15_10_IRQHandler
+                0x080005c4                TIM7_IRQHandler
+                0x080005c4                FDCAN3_IT1_IRQHandler
+                0x080005c4                TIM5_IRQHandler
+                0x080005c4                UCPD1_IRQHandler
+                0x080005c4                I2C3_EV_IRQHandler
+                0x080005c4                EXTI9_5_IRQHandler
+                0x080005c4                DMA1_CH2_IRQHandler
+                0x080005c4                RTC_WKUP_IRQHandler
+                0x080005c4                SAI_IRQHandler
+                0x080005c4                PVD_PVM_IRQHandler
+                0x080005c4                SPI2_IRQHandler
+                0x080005c4                DMA1_CH1_IRQHandler
+                0x080005c4                MemManage_Handler
+                0x080005c4                ADC5_IRQHandler
+                0x080005c4                SVC_Handler
+                0x080005c4                CRS_IRQHandler
+                0x080005c4                USB_LP_IRQHandler
+                0x080005c4                EXTI4_IRQHandler
+                0x080005c4                RNG_IRQHandler
+                0x080005c4                FDCAN2_IT1_IRQHandler
+                0x080005c4                HRTIM_TIMF_IRQn_IRQHandler
+                0x080005c4                ADC4_IRQHandler
+                0x080005c4                HRTIM_TIMA_IRQn_IRQHandler
+                0x080005c4                WWDG_IRQHandler
+                0x080005c4                I2C4_EV_IRQHandler
+                0x080005c4                FDCAN2_IT0_IRQHandler
+                0x080005c4                FDCAN1_IT0_IRQHandler
+                0x080005c4                COMP7_IRQHandler
+                0x080005c4                COMP1_2_3_IRQHandler
+                0x080005c4                EXTI1_IRQHandler
+                0x080005c4                HRTIM_TIMC_IRQn_IRQHandler
+                0x080005c4                USART2_IRQHandler
+                0x080005c4                COMP4_5_6_IRQHandler
+                0x080005c4                TIM20_BRK_IRQHandler
+                0x080005c4                I2C2_ER_IRQHandler
+                0x080005c4                TIM8_BRK_IRQHandler
+                0x080005c4                FLASH_IRQHandler
+                0x080005c4                TIM20_CC_IRQHandler
+                0x080005c4                BusFault_Handler
+                0x080005c4                USART1_IRQHandler
+                0x080005c4                SPI3_IRQHandler
+                0x080005c4                DMA2_CH6_IRQHandler
+                0x080005c4                DMA2_CH3_IRQHandler
+                0x080005c4                DMA2_CH2_IRQHandler
+                0x080005c4                I2C1_ER_IRQHandler
+                0x080005c4                FMC_IRQHandler
+                0x080005c4                DMA1_CH5_IRQHandler
+                0x080005c4                DMA2_CH4_IRQHandler
+                0x080005c4                LPTIM1_IRQHandler
+                0x080005c4                DMAMUX_OVR_IRQHandler
+                0x080005c4                I2C4_ER_IRQHandler
+                0x080005c4                HRTIM_TIME_IRQn_IRQHandler
+                0x080005c4                RTC_TAMP_CSS_LSE_IRQHandler
+                0x080005c4                TIM1_BRK_TIM15_IRQHandler
  *(.glue_7)
- .glue_7        0x0800053e        0x0 linker stubs
+ .glue_7        0x080005c6        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0800053e        0x0 linker stubs
+ .glue_7t       0x080005c6        0x0 linker stubs
  *(.eh_frame)
- *fill*         0x0800053e        0x2 
- .eh_frame      0x08000540        0x0 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ *fill*         0x080005c6        0x2 
+ .eh_frame      0x080005c8        0x0 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x08000540        0x4 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08000540                _init
- .init          0x08000544        0x8 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x080005c8        0x4 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x080005c8                _init
+ .init          0x080005cc        0x8 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x0800054c        0x4 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x0800054c                _fini
- .fini          0x08000550        0x8 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x08000558                        . = ALIGN (0x4)
-                0x08000558                        _etext = .
+ .fini          0x080005d4        0x4 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x080005d4                _fini
+ .fini          0x080005d8        0x8 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x080005e0                        . = ALIGN (0x4)
+                0x080005e0                        _etext = .
 
-.vfp11_veneer   0x08000558        0x0
- .vfp11_veneer  0x08000558        0x0 linker stubs
+.vfp11_veneer   0x080005e0        0x0
+ .vfp11_veneer  0x080005e0        0x0 linker stubs
 
-.v4_bx          0x08000558        0x0
- .v4_bx         0x08000558        0x0 linker stubs
+.v4_bx          0x080005e0        0x0
+ .v4_bx         0x080005e0        0x0 linker stubs
 
-.iplt           0x08000558        0x0
- .iplt          0x08000558        0x0 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x080005e0        0x0
+ .iplt          0x080005e0        0x0 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x08000558        0x0
-                0x08000558                        . = ALIGN (0x4)
+.rodata         0x080005e0        0x0
+                0x080005e0                        . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
-                0x08000558                        . = ALIGN (0x4)
+                0x080005e0                        . = ALIGN (0x4)
 
-.ARM.extab      0x08000558        0x0
-                0x08000558                        . = ALIGN (0x4)
+.ARM.extab      0x080005e0        0x0
+                0x080005e0                        . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08000558                        . = ALIGN (0x4)
+                0x080005e0                        . = ALIGN (0x4)
 
-.ARM            0x08000558        0x0
-                0x08000558                        . = ALIGN (0x4)
-                0x08000558                        __exidx_start = .
+.ARM            0x080005e0        0x0
+                0x080005e0                        . = ALIGN (0x4)
+                0x080005e0                        __exidx_start = .
  *(.ARM.exidx*)
-                0x08000558                        __exidx_end = .
-                0x08000558                        . = ALIGN (0x4)
+                0x080005e0                        __exidx_end = .
+                0x080005e0                        . = ALIGN (0x4)
 
-.preinit_array  0x08000558        0x0
-                0x08000558                        . = ALIGN (0x4)
-                0x08000558                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x080005e0        0x0
+                0x080005e0                        . = ALIGN (0x4)
+                0x080005e0                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08000558                        PROVIDE (__preinit_array_end = .)
-                0x08000558                        . = ALIGN (0x4)
+                0x080005e0                        PROVIDE (__preinit_array_end = .)
+                0x080005e0                        . = ALIGN (0x4)
 
-.init_array     0x08000558        0x8
-                0x08000558                        . = ALIGN (0x4)
-                0x08000558                        PROVIDE (__init_array_start = .)
+.init_array     0x080005e0        0x8
+                0x080005e0                        . = ALIGN (0x4)
+                0x080005e0                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x08000558        0x4 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
+                0x080005e0        0x4 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x0800055c        0x4 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x08000560                        PROVIDE (__init_array_end = .)
-                0x08000560                        . = ALIGN (0x4)
+ .init_array    0x080005e4        0x4 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x080005e8                        PROVIDE (__init_array_end = .)
+                0x080005e8                        . = ALIGN (0x4)
 
-.fini_array     0x08000560        0x4
-                0x08000560                        . = ALIGN (0x4)
-                0x08000560                        PROVIDE (__fini_array_start = .)
+.fini_array     0x080005e8        0x4
+                0x080005e8                        . = ALIGN (0x4)
+                0x080005e8                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08000560        0x4 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x08000564                        PROVIDE (__fini_array_end = .)
-                0x08000564                        . = ALIGN (0x4)
-                0x08000564                        _sidata = LOADADDR (.data)
+ .fini_array    0x080005e8        0x4 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x080005ec                        PROVIDE (__fini_array_end = .)
+                0x080005ec                        . = ALIGN (0x4)
+                0x080005ec                        _sidata = LOADADDR (.data)
 
-.rel.dyn        0x08000564        0x0
- .rel.iplt      0x08000564        0x0 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x080005ec        0x0
+ .rel.iplt      0x080005ec        0x0 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.data           0x20000000        0x4 load address 0x08000564
+.data           0x20000000        0x4 load address 0x080005ec
                 0x20000000                        _sdata = .
  *(.data)
  *(.data*)
@@ -829,10 +830,10 @@ LOAD /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/b
  *(.RamFunc*)
                 0x20000004                        . = ALIGN (0x4)
 
-.igot.plt       0x20000004        0x0 load address 0x08000568
+.igot.plt       0x20000004        0x0 load address 0x080005f0
  .igot.plt      0x20000004        0x0 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.tdata          0x20000004        0x0 load address 0x08000568
+.tdata          0x20000004        0x0 load address 0x080005f0
  *(.tdata .tdata.* .gnu.linkonce.td.*)
                 0x20000004                        . = ALIGN (0x4)
                 0x20000004                        _edata = .
@@ -849,7 +850,7 @@ LOAD /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/b
                 [!provide]                        PROVIDE (__data_source_end = __tdata_source_end)
                 [!provide]                        PROVIDE (__data_source_size = (__data_source_end - __data_source))
 
-.tbss           0x20000004        0x0 load address 0x08000568
+.tbss           0x20000004        0x0 load address 0x080005f0
                 0x20000004                        _sbss = .
                 0x20000004                        __bss_start__ = _sbss
                 [!provide]                        PROVIDE (__bss_start = .)
@@ -867,7 +868,7 @@ LOAD /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/b
                 [!provide]                        PROVIDE (__arm32_tls_tcb_offset = MAX (0x8, __tls_align))
                 [!provide]                        PROVIDE (__arm64_tls_tcb_offset = MAX (0x10, __tls_align))
 
-.bss            0x20000004      0x1b4 load address 0x08000568
+.bss            0x20000004      0x1b4 load address 0x080005f0
  *(.bss)
  .bss           0x20000004       0x1c /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.bss*)
@@ -887,9 +888,9 @@ LOAD /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/b
                 [!provide]                        PROVIDE (__bss_end = .)
                 [!provide]                        PROVIDE (__bss_size = (__bss_end - __bss_start))
                 [!provide]                        PROVIDE (__non_tls_bss_start = ADDR (.bss))
-                0x08000568                        _siccmsram = LOADADDR (.ccmsram)
+                0x080005f0                        _siccmsram = LOADADDR (.ccmsram)
 
-.ccmsram        0x10000000        0x0 load address 0x08000568
+.ccmsram        0x10000000        0x0 load address 0x080005f0
                 0x10000000                        . = ALIGN (0x4)
                 0x10000000                        _sccmsram = .
  *(.ccmsram)
@@ -941,22 +942,22 @@ LOAD /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/b
 OUTPUT(blinky.elf elf32-littlearm)
 LOAD linker stubs
 
-.debug_frame    0x00000000      0x284
+.debug_frame    0x00000000      0x280
  .debug_frame   0x00000000       0x2c /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
  .debug_frame   0x0000002c       0xb0 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-lock.o)
  .debug_frame   0x000000dc       0x5c /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
  .debug_frame   0x00000138       0x20 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
  .debug_frame   0x00000158       0x34 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
  .debug_frame   0x0000018c       0x34 /home/hiro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
- .debug_frame   0x000001c0       0xc4 CMakeFiles/blinky.dir/Src/main.c.obj
+ .debug_frame   0x000001c0       0xc0 CMakeFiles/blinky.dir/Src/main.c.obj
 
-.debug_info     0x00000000      0xe9c
- .debug_info    0x00000000      0xe6c CMakeFiles/blinky.dir/Src/main.c.obj
- .debug_info    0x00000e6c       0x30 CMakeFiles/blinky.dir/Src/startup_stm32g474xx.S.obj
+.debug_info     0x00000000      0xe71
+ .debug_info    0x00000000      0xe41 CMakeFiles/blinky.dir/Src/main.c.obj
+ .debug_info    0x00000e41       0x30 CMakeFiles/blinky.dir/Src/startup_stm32g474xx.S.obj
 
-.debug_abbrev   0x00000000      0x1db
- .debug_abbrev  0x00000000      0x1b7 CMakeFiles/blinky.dir/Src/main.c.obj
- .debug_abbrev  0x000001b7       0x24 CMakeFiles/blinky.dir/Src/startup_stm32g474xx.S.obj
+.debug_abbrev   0x00000000      0x1ae
+ .debug_abbrev  0x00000000      0x18a CMakeFiles/blinky.dir/Src/main.c.obj
+ .debug_abbrev  0x0000018a       0x24 CMakeFiles/blinky.dir/Src/startup_stm32g474xx.S.obj
 
 .debug_aranges  0x00000000       0x70
  .debug_aranges
@@ -985,14 +986,14 @@ LOAD linker stubs
  .debug_macro   0x000016ce      0x11f CMakeFiles/blinky.dir/Src/main.c.obj
  .debug_macro   0x000017ed    0x18b8c CMakeFiles/blinky.dir/Src/main.c.obj
 
-.debug_line     0x00000000      0x547
- .debug_line    0x00000000      0x4cc CMakeFiles/blinky.dir/Src/main.c.obj
- .debug_line    0x000004cc       0x7b CMakeFiles/blinky.dir/Src/startup_stm32g474xx.S.obj
+.debug_line     0x00000000      0x537
+ .debug_line    0x00000000      0x4bc CMakeFiles/blinky.dir/Src/main.c.obj
+ .debug_line    0x000004bc       0x7b CMakeFiles/blinky.dir/Src/startup_stm32g474xx.S.obj
 
-.debug_str      0x00000000    0x9f5c8
- .debug_str     0x00000000    0x9f5c8 CMakeFiles/blinky.dir/Src/main.c.obj
-                              0x9f724 (size before relaxing)
- .debug_str     0x0009f5c8       0x9a CMakeFiles/blinky.dir/Src/startup_stm32g474xx.S.obj
+.debug_str      0x00000000    0x9f5bb
+ .debug_str     0x00000000    0x9f5bb CMakeFiles/blinky.dir/Src/main.c.obj
+                              0x9f717 (size before relaxing)
+ .debug_str     0x0009f5bb       0x9a CMakeFiles/blinky.dir/Src/startup_stm32g474xx.S.obj
 
 .comment        0x00000000       0x43
  .comment       0x00000000       0x43 CMakeFiles/blinky.dir/Src/main.c.obj
