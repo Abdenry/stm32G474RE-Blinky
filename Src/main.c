@@ -23,19 +23,20 @@
 
 void configureUSRLED2();
 void configureClock();
+void configureTim2Interrupt();
 
 int main(void)
 {
     int cpuFrequency = 15000000;
     configureClock();
-
+    // configureTim2Interrupt();
     // USER LED (LD2) CONNECTED TO PA5
     configureUSRLED2();
 
     /* Loop forever */
 	while(1){
 
-        for (int i = 0; i <= cpuFrequency/2; i++) {
+        for (int i = 0; i <= cpuFrequency; i++) {
         }
         GPIOA->ODR ^= GPIO_ODR_OD5;       
     }
@@ -48,9 +49,11 @@ void configureUSRLED2(){
 }
 
 void configureClock(){
+    // 1. Ensure flash latency and power mode is adjusted for desired frequency
     FLASH->ACR |= FLASH_ACR_LATENCY_4WS;
     PWR->CR5 &= ~PWR_CR5_R1MODE;
 
+    // 2. Calculate the M N (P | R | Q) pre scalers, ensure none of them are greater than datasheet specifications
     // PLLInputClock = (PLLSRC/M)
     //      Where:  1 <= M <= 16 
     //              2.66 MHz <= PLLInputClock <= 16 MHz
@@ -66,20 +69,50 @@ void configureClock(){
     RCC->PLLCFGR |= RCC_PLLCFGR_PLLM_0 | RCC_PLLCFGR_PLLM_1;
     RCC->PLLCFGR |= RCC_PLLCFGR_PLLN_0 | RCC_PLLCFGR_PLLN_1 | RCC_PLLCFGR_PLLN_3 | RCC_PLLCFGR_PLLN_6; 
     RCC->PLLCFGR &= ~RCC_PLLCFGR_PLLR;
+
+    // 3. Enable the PLL and wait for it to be ready
     RCC->CR |= RCC_CR_PLLON;
+    while (!(RCC->CR & RCC_CR_PLLRDY)) {    
+    }
+
+    // 4. Enable desired output from PLL (P | R | Q)
     RCC->PLLCFGR |= RCC_PLLCFGR_PLLREN;
 
+    // 5. When switching from a low speed to high speed sys clock and intermediate speed is needed -> pre-scale AHB/2 and switch SYSCLOCK to PLL and wait for the switch
     RCC->CFGR |= RCC_CFGR_HPRE_DIV2;
     RCC->CFGR |= RCC_CFGR_SW_PLL;
+    while (!(RCC->CFGR & RCC_CFGR_SWS_PLL)) {
+    }
 
+    // 6. Wait at least 1us in intermediate speed
     // Enable DWT Cycle counter to count cycles which will equal 1us
     //      150MHz / 2 = 75MHz -> 75MHz * 1us = 75 cycles
     CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
     DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk;
+    DWT->CYCCNT =0;
     while(DWT->CYCCNT < 80);
+
+    // 7. Clear AHB and APB1/2 pre-scalers for full speed
+    RCC->CFGR &= ~RCC_CFGR_HPRE;
+    RCC->CFGR &= ~RCC_CFGR_PPRE1;
+    RCC->CFGR &= ~RCC_CFGR_PPRE2;
 
     RCC->CFGR |= RCC_CFGR_HPRE_DIV1;
     RCC->CFGR |= RCC_CFGR_PPRE1_DIV1;
     RCC->CFGR |= RCC_CFGR_PPRE2_DIV1;
-    
+}
+
+void configureTim2Interrupt(){
+    RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN;
+    TIM2->PSC = 0;
+    TIM2->ARR = 150000000-1;
+    TIM2->CNT = 0;
+    TIM2->DIER |= TIM_DIER_UIE;
+    NVIC_EnableIRQ(TIM2_IRQn);
+    TIM2->CR1 |= TIM_CR1_CEN;
+}
+
+void TIM2_IRQHandler(void){
+    TIM2->SR &=~ TIM_SR_UIF;
+    GPIOA->ODR ^= GPIO_ODR_OD5; 
 }
